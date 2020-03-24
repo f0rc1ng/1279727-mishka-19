@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Дмитрий Безгрешнов](https://up.htmlacademy.ru/adaptive/19/user/1279727).
-* Наставник: `Неизвестно`.
+- Студент:[Дмитрий Безгрешнов](https://up.htmlacademy.ru/adaptive/19/user/1279727).
+- Наставник:[Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 
