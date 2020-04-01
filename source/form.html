@@ -1,115 +1,204 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Мишка</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Мишка</title>
-</head>
+  <body>
+    <header class="page-header">
+      <a href="#" class="page-header__logo"
+        ><img
+          class="page-header__logo-image"
+          src="#"
+          width="#"
+          height="#"
+          alt="logo"
+      /></a>
 
-<body>
-  <header class="page-header">
-    <a href="#" class="page-header__logo"><img class="page-header__logo-image" src="#" width="#" height="#"
-        alt="logo"></a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle"></button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="" class="main-nav__link">Каталог товаров</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link">Вязание на заказ</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link--search-icon">Поиск по сайту</a></li>
-        <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link--cart-icon">Корзина: пока пуста</a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link main-nav__link--search-icon"
+              >Поиск по сайту</a
+            >
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link main-nav__link--cart-icon"
+              >Корзина: пока пуста</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page__title">Вязание на заказ</h1>
+      <div class="page-form">
+        <div class="page-form__wrapper">
+          <p class="page-form__description">
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+            форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+          <form
+            class="page-form__body"
+            action="https://echo.htmlacademy.ru"
+            method="post"
+          >
+            <p class="page-form__subtitle">Тип</p>
+            <div class="page-form__radio">
+              <input
+                type="radio"
+                name="grid"
+                id="interor"
+                value="Аксессуар для интерьера"
+                checked
+              />
+              <label class="radio-label" for="interior"
+                >Аксессуар для интерьера</label
+              >
+            </div>
+            <div class="page-form__radio">
+              <input
+                type="radio"
+                name="grid"
+                id="joy"
+                value="Детская игрушка"
+              />
+              <label class="radio-label" for="joy">Детская игрушка</label>
+            </div>
+            <p class="page-form__subtitle">Цвет</p>
+            <div class="checkbox">
+              <input type="checkbox" name="white" id="white-field" checked />
+              <label class="checkbox-label" for="white-field">Слайдер</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="grey" id="grey-field" checked />
+              <label class="checkbox-label" for="grey-field">
+                Блок преимуществ</label
+              >
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="tiffany" id="tiffany-field" />
+              <label class="checkbox-label" for="tiffany-field">Новости</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="black" id="black-field" />
+              <label class="checkbox-label" for="black-field">Галерея </label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="pink" id="pink-field" />
+              <label class="checkbox-label" for="pink-field">Корзина</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="orange" id="orange-field" />
+              <label class="checkbox-label" for="orange-field">Корзина</label>
+            </div>
+            <p class="page-form__subtitle">ФИО</p>
+            <label class="page-form__name-block"
+              ><span class="page-form__name-title">Имя:</span>
+              <input
+                class="page-form__name-field"
+                type="text"
+                name="name"
+                placeholder="Введите ваше имя<sup>*</sup>"
+                required
+              />
+            </label>
+            <label class="page-form__surname-block"
+              ><span class="page-form__surname-title">Фамилия:</span>
+              <input
+                class="page-form__surname-field"
+                type="text"
+                name="surname"
+                placeholder="Укажите фамилию<sup>*</sup>"
+                required
+              />
+            </label>
+            <label class="page-form__secondname-block"
+              ><span class="page-form__secondname-title">Отчество:</span>
+              <input
+                class="page-form__secondname-field"
+                type="text"
+                name="secondname"
+                placeholder="Отчество, если желаете"
+              />
+            </label>
+            <p class="page-form__subtitle">Тел</p>
+            <label class="page-form__tel-block">
+              <input
+                class="page-form__tel-field"
+                type="tel"
+                name="tel"
+                placeholder="+7 XXX XXX XX XX<sup>*</sup>"
+                required
+              />
+            </label>
+            <p class="page-form__subtitle">e-mail</p>
+            <label class="page-form__email-block">
+              <input
+                class="page-form__email-field"
+                type="email"
+                name="email"
+                placeholder="Ваш Email<sup>*</sup>"
+                required
+              />
+            </label>
+            <p class="page-form__subtitle">Доп</p>
+            <label class="page-form__email-block">
+              <textarea
+                class="page-form__textarea-block"
+                name="add-info"
+                rows="10"
+                placeholder="Опишите все ваши пожелания к заказу"
+              >
+              </textarea>
+            </label>
+            <p class="page-form__warning">
+              <sup>*</sup>Поля обязательны для заполнения
+            </p>
+            <button class="page-form__button button" type="submit">
+              Отправить заказ
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a
+            href="#"
+            class="page-footer__social-link page-footer__social-link--insta"
+          ></a>
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            href="#"
+            class="page-footer__social-link page-footer__social-link--fb"
+          ></a>
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            href="#"
+            class="page-footer__social-link page-footer__social-link--tw"
+          ></a>
         </li>
       </ul>
-    </nav>
-  </header>
-  <main class="page-main">
-    <h1 class="page__title">Вязание на заказ</h1>
-    <div class="page-form">
-      <div class="page-form__wrapper">
-        <p class="page-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа
-          и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="page-form__body" action="https://echo.htmlacademy.ru" method="post">
-          <p class="page-form__subtitle">Тип</p>
-          <div class="page-form__radio">
-            <input type="radio" name="grid" id="grid1" value="Аксессуар для интерьера" checked />
-            <label class="radio-label" for="grid1">Аксессуар для интерьера</label>
-          </div>
-          <div class="page-form__radio">
-            <input type="radio" name="grid" id="grid2" value="Детская игрушка" />
-            <label class="radio-label" for="grid2">Детская игрушка</label>
-          </div>
-          <p class="page-form__subtitle">Цвет</p>
-          <div class="checkbox">
-            <input type="checkbox" name="white" id="white-field" checked />
-            <label class="checkbox-label" for="white-field">Слайдер</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="grey" id="grey-field" checked />
-            <label class="checkbox-label" for="grey-field">
-              Блок преимуществ</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="tiffany" id="tiffany-field" />
-            <label class="checkbox-label" for="tiffany-field">Новости</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="black" id="black-field" />
-            <label class="checkbox-label" for="black-field">Галерея
-            </label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="pink" id="pink-field" />
-            <label class="checkbox-label" for="pink-field">Корзина</label>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="orange" id="orange-field" />
-            <label class="checkbox-label" for="orange-field">Корзина</label>
-          </div>
-          <p class="page-form__subtitle">ФИО</p>
-          <label class="page-form__name-block"><span class="page-form__name-title">Имя:</span>
-            <input class="page-form__name-field" type="text" name="name" placeholder="Введите ваше имя*" required>
-          </label>
-          <label class="page-form__surname-block"><span class="page-form__surname-title">Фамилия:</span>
-            <input class="page-form__surname-field" type="text" name="surname" placeholder="Укажите фамилию*" required>
-          </label>
-          <label class="page-form__secondname-block"><span class="page-form__secondname-title">Отчество:</span>
-            <input class="page-form__secondname-field" type="text" name="secondname"
-              placeholder="Отчество, если желаете">
-          </label>
-          <p class="page-form__subtitle">Тел</p>
-          <label class="page-form__tel-block">
-            <input class="page-form__tel-field" type="tel" name="tel" placeholder="+7 XXX XXX XX XX*" required>
-          </label>
-          <p class="page-form__subtitle">e-mail</p>
-          <label class="page-form__email-block">
-            <input class="page-form__email-field" type="email" name="email" placeholder="Ваш Email*" required>
-          </label>
-          <p class="page-form__subtitle">Доп</p>
-          <label class="page-form__email-block">
-            <textarea class="page-form__textarea-block" name="add-info" rows="10"
-              placeholder="Опишите все ваши пожелания к заказу">
-          </textarea>
-          </label>
-          <p class="page-form__warning">*Поля обязательны для заполнения</p>
-          <button class="page-form__button button" type="submit">Отправить заказ</button>
-        </form>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано:</p>
+        <a
+          class="copyright__link"
+          href="https://htmlacademy.ru/intensive/adaptive"
+          ><span class="visually-hidden">HTML Academy</span></a
+        >
       </div>
-    </div>
-  </main>
-  <footer class="page-footer">
-    <ul class="page-footer__social-list">
-      <li class="page-footer__social-item"><a href="#"
-          class="page-footer__social-link page-footer__social-link--insta"></a></li>
-      <li class="page-footer__social-item"><a href="#"
-          class="page-footer__social-link page-footer__social-link--fb"></a></li>
-      <li class="page-footer__social-item"><a href="#"
-          class="page-footer__social-link page-footer__social-link--tw"></a></li>
-    </ul>
-    <div class="page-footer__copyright">
-      <p class="copyright__text">Разработано:</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
-          Academy</span></a>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
