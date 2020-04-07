@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -20,10 +21,10 @@
         <button class="main-nav__toggle"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">Каталог товаров</a>
+            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">Вязание на заказ</a>
+            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
           </li>
           <li class="main-nav__item">
             <a href="" class="main-nav__link main-nav__link--search-icon"
@@ -93,9 +94,9 @@
 
           <img
             class="product-week__image"
-            src="#"
-            width="#"
-            height="#"
+            src="img/triple-set-mobile@1x.jpg"
+            width="260"
+            height="315"
             alt="Вязаные корзинки"
           />
           <span class="product-week__price">Цена: 990 руб.</span>
@@ -103,33 +104,35 @@
         </div>
       </section>
       <section class="advantages">
-        <h2 class="advantages__title">Преимущества</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--flower-icon">
-            Экологически чистые материалы
-          </li>
-          <li class="advantages__item advantages__item--banknote-icon">
-            Скандинавский стиль по российской цене
-          </li>
-          <li class="advantages__item advantages__item--heart-icon">
-            Увеличивает лайки на фотографиях
-          </li>
-          <li class="advantages__item advantages__item--ball-icon">
-            Связано вручную с любовью и умилением
-          </li>
-          <li class="advantages__item advantages__item--rocket-icon">
-            Поддержка отечественного производителя
-          </li>
-          <li class="advantages__item advantages__item-text--gift-icon">
-            Поставляется в подарочной упаковке
-          </li>
-        </ul>
+        <div class="advantages__wrapper">
+          <h2 class="advantages__title">Коротко о нас</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--flower-icon">
+              Экологически чистые материалы
+            </li>
+            <li class="advantages__item advantages__item--banknote-icon">
+              Скандинавский стиль по российской цене
+            </li>
+            <li class="advantages__item advantages__item--heart-icon">
+              Увеличивает лайки на фотографиях
+            </li>
+            <li class="advantages__item advantages__item--ball-icon">
+              Связано вручную с любовью и умилением
+            </li>
+            <li class="advantages__item advantages__item--rocket-icon">
+              Поддержка отечественного производителя
+            </li>
+            <li class="advantages__item advantages__item--gift-icon">
+              Поставляется в подарочной упаковке
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__list  slider__list">
-            <blockquote class="reviews__item  slider__item">
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item slider__item">
               <p class="reviews__text">
                 Я молодая мама, но всё равно фотографии не набирали и близко
                 такого количества лайков, как у популярных инстамамочек. В
@@ -145,10 +148,10 @@
               </cite>
             </blockquote>
           </div>
-          <button class="reviews__prev" type="button">
+          <button class="reviews__prev reviews__button" type="button">
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
-          <button class="reviews__next" type="button">
+          <button class="reviews__next reviews__button" type="button">
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
           <a class="reviews__write button" href="#">Написать</a>
@@ -169,19 +172,21 @@
               г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
             </li>
           </ul>
-          <noscript
-            ><img
-              src="#"
-              alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
-          /></noscript>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6133820450889!2d30.3207472519547!3d59.93855728178721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1585676184692!5m2!1sru!2sru"
-            frameborder="0"
-            style="border:0;"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
+        </div>
+        <noscript
+          ><img
+            src="#"
+            alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
+        /></noscript>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6133820450889!2d30.3207472519547!3d59.93855728178721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1585676184692!5m2!1sru!2sru"
+          frameborder="0"
+          style="border: 0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+        <div class="contacts__wrapper">
           <a class="contacts__write button" href="#">Напишите нам</a>
         </div>
       </section>
@@ -207,10 +212,10 @@
           ></a>
         </li>
       </ul>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано:</p>
+      <div class="page-footer__copyright">
+        <p class="page-footer__text">Разработано:</p>
         <a
-          class="copyright__link"
+          class="page-footer__link"
           href="https://htmlacademy.ru/intensive/adaptive"
           ><span class="visually-hidden">HTML Academy</span></a
         >
