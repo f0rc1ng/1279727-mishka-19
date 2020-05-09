@@ -1,6 +1,6 @@
 .intro {
   background-image: url("../../img/hero-mobile@1x.jpg");
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -10,6 +10,22 @@
   line-height: 30px;
   font-weight: 700;
   text-align: center;
+  margin: 0;
+  padding-top: 85px;
+  padding-bottom: 0;
+  max-width: 244px;
+
+  span {
+    display: block;
+  }
+}
+
+.intro__item {
+  display: flex;
+  padding: 0;
+  padding-left: 29px;
+  height: 103px;
+  align-items: center;
 }
 
 .intro__item--lamp-icon {
@@ -24,6 +40,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: auto;
+    margin-right: 36px;
   }
 }
 
@@ -39,6 +57,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: auto;
+    margin-right: 27px;
   }
 }
 
@@ -47,4 +67,79 @@
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+  display: block;
+  max-width: 177px;
+}
+
+.intro__list {
+  padding: 0;
+  margin-top: 40px;
+}
+
+.intro__header {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 772px) {
+  .intro__title span {
+    display: inline;
+  }
+
+  .intro__title {
+    font-size: 43px;
+    line-height: 50px;
+    max-width: 577px;
+    padding-top: 160px;
+  }
+
+  .intro__list {
+    display: flex;
+    padding: 0 52px;
+    margin-top: 300px;
+    position: relative;
+  }
+
+  .intro__item {
+    flex-grow: 1;
+    height: 119px;
+    padding-left: 36px;
+
+    &:first-child::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .intro {
+    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .intro__item--toy-icon::after {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .intro {
+    background-image: url("../../img/hero-desktop@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .intro__list {
+    padding: 0 50px;
+  }
 }
