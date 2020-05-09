@@ -33,6 +33,7 @@
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .page-form__checkbox {
@@ -82,12 +83,10 @@
   border-top-style: none;
   border-right-style: none;
   transform: rotate(-45deg);
-  box-shadow: 0 2px 0 0 #ffffff, inset 0 -2px 0 0 #fff;
+  box-shadow: 0 2px 0 0 #ffffff, inset 0 -2px 0 0 #ffffff;
 }
 
-.page-form__checkbox
-  input[type="checkbox"]:checked
-  ~ .checkbox-label:hover::after {
+.page-form__checkbox input[type="checkbox"]:checked ~ .checkbox-label:hover::after {
   border-color: #4d4d4d;
 }
 
@@ -98,10 +97,6 @@
 .page-form__checkbox input[type="checkbox"]:focus + .checkbox-label::before,
 .page-form__checkbox input[type="checkbox"]:focus + .checkbox-label::after {
   border-color: #4d4d4d;
-}
-
-.page-form__radio {
-  margin-bottom: 30px;
 }
 
 .page-form__radio input[type="radio"] {
@@ -126,8 +121,8 @@
   z-index: 1;
   width: 16px;
   height: 16px;
-  background-color: #fff;
-  border: 8px solid #fff;
+  background-color: #ffffff;
+  border: 8px solid #ffffff;
   box-shadow: 0 0 0 2px #444444;
   transition-timing-function: ease-out;
   transition-duration: 0.2s;
@@ -156,7 +151,7 @@
   flex-direction: column;
   margin-bottom: 24px;
   position: relative;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #000000;
 }
 
 .page-form__title {
@@ -187,7 +182,7 @@
 }
 
 .page-form__textarea-field {
-  border: 2px solid #000;
+  border: 2px solid #000000;
   padding: 18px;
   font-size: 17px;
   line-height: 18px;
@@ -333,7 +328,7 @@ textarea::placeholder {
   .page-form__field {
     font-size: 19px;
     line-height: 18px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000000;
     padding-left: 30px;
     margin-left: 20px;
     width: 100%;
@@ -396,7 +391,7 @@ textarea::placeholder {
     width: 20px;
     height: 20px;
 
-    border: 14px solid #fff;
+    border: 14px solid #ffffff;
   }
 }
 
@@ -404,6 +399,7 @@ textarea::placeholder {
   .page-form__description {
     margin: 0 253px 30px 225px;
   }
+
   .page-form__subtitle {
     margin-left: 114px;
   }
