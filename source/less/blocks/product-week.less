@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: 772px) {
+@media (min-width: 768px) {
   .product-week__wrapper {
     padding: 0 52px;
   }
@@ -152,8 +152,13 @@
 }
 
 @media (min-width: 1150px) {
+  .product-week {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
   .product-week__wrapper {
-    padding: 0 50px;
+    padding: 0;
   }
 
   .product-week__category {
@@ -181,6 +186,11 @@
   .product-week__wrapper-info {
     padding-right: 58px;
     padding-top: 200px;
+  }
+
+  .product-week__wrapper-image {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .product-week__image {

@@ -86,7 +86,9 @@
   box-shadow: 0 2px 0 0 #ffffff, inset 0 -2px 0 0 #ffffff;
 }
 
-.page-form__checkbox input[type="checkbox"]:checked ~ .checkbox-label:hover::after {
+.page-form__checkbox
+  input[type="checkbox"]:checked
+  ~ .checkbox-label:hover::after {
   border-color: #4d4d4d;
 }
 
@@ -213,7 +215,7 @@ textarea::placeholder {
   background-image: url("../../img/icon-mail.svg");
 }
 
-@media (min-width: 772px) {
+@media (min-width: 768px) {
   .page-form__wrapper {
     padding: 0;
   }
@@ -396,6 +398,12 @@ textarea::placeholder {
 }
 
 @media (min-width: 1150px) {
+  .page-form__wrapper {
+    padding: 0;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
   .page-form__description {
     margin: 0 253px 30px 225px;
   }

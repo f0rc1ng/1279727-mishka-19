@@ -63,7 +63,11 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 772px) {
+.page-form__textarea-field {
+  resize: none;
+}
+
+@media (min-width: 768px) {
   .products__wrapper {
     padding: 0 50px;
   }
@@ -110,6 +114,9 @@
   .products__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 
   .products__item {

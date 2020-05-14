@@ -23,7 +23,7 @@
             <span class="main-nav__toggle-line"></span>
           </button>
         </div>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list main-nav--nojs main-nav--closed">
           <li class="main-nav__item">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
           </li>
@@ -34,7 +34,7 @@
             <span class="main-nav__text">Бесплатная доставка по России</span>
           </li>
         </ul>
-        <ul class="main-nav__list user-list">
+        <ul class="main-nav__list user-list main-nav--nojs main-nav--closed">
           <li class="main-nav__item">
             <a href="" class="main-nav__link main-nav__link--search-icon"
               ><span class="main-nav__link-text">Поиск по сайту</span></a
@@ -71,10 +71,16 @@
         </header>
         <ul class="intro__list">
           <li class="intro__item intro__item--lamp-icon">
-            <a href="#" class="intro__link">Предметы интерьера</a>
+            <a href="#" class="intro__link"
+              >Предметы <br />
+              интерьера</a
+            >
           </li>
           <li class="intro__item intro__item--toy-icon">
-            <a href="#" class="intro__link">Детские игрушки</a>
+            <a href="#" class="intro__link"
+              >Детские <br />
+              игрушки</a
+            >
           </li>
         </ul>
       </section>
@@ -117,9 +123,6 @@
                   </td>
                 </tr>
               </table>
-
-              <span class="product-week__price">Цена: 990 руб.</span>
-              <a href="#" class="product-week__button button">Заказать</a>
             </div>
             <div class="product-week__wrapper-image">
               <img
@@ -192,18 +195,18 @@
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">e-mail:</li>
-            <li class="contacts__item">
+          <div class="contacts__list">
+            <div class="contacts__item">e-mail:</div>
+            <div class="contacts__item">
               <a href="mailto: info@mimimishkashop.ru"
                 >info@mimimishkashop.ru</a
               >
-            </li>
-            <li class="contacts__item">адрес:</li>
-            <li class="contacts__item">
+            </div>
+            <div class="contacts__item">адрес:</div>
+            <div class="contacts__item">
               г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-            </li>
-          </ul>
+            </div>
+          </div>
           <a class="contacts__write button" href="#">Напишите нам</a>
 
           <noscript
@@ -265,5 +268,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
