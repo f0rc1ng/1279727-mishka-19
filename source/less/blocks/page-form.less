@@ -86,9 +86,7 @@
   box-shadow: 0 2px 0 0 #ffffff, inset 0 -2px 0 0 #ffffff;
 }
 
-.page-form__checkbox
-  input[type="checkbox"]:checked
-  ~ .checkbox-label:hover::after {
+.page-form__checkbox input[type="checkbox"]:checked ~ .checkbox-label:hover::after {
   border-color: #4d4d4d;
 }
 
@@ -400,8 +398,6 @@ textarea::placeholder {
 @media (min-width: 1150px) {
   .page-form__wrapper {
     padding: 0;
-    max-width: 1150px;
-    margin: 0 auto;
   }
 
   .page-form__description {
