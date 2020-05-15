@@ -2,8 +2,79 @@
   background-color: #f1f1f1;
 }
 
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .page-footer__text {
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+  margin-right: 30px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__social-list {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 141px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.page-footer__social-link {
+  padding: 0;
+  display: block;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  margin: 0 30px;
+  border-top: solid 1px #d3d3d3;
+}
+
+.page-footer__link {
+  display: block;
+  width: 27px;
+  height: 34px;
+  background-image: url("../../img/logo-htmlacademy.svg");
+  margin-top: 13px;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .page-footer__copyright {
+    border-top: none;
+    margin: 0;
+  }
+
+  .page-footer__wrapper {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .page-footer__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer__social-list {
+    margin: 0;
+    margin-left: 80px;
+  }
 }
