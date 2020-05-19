@@ -51,6 +51,10 @@
   height: 52px;
   border: solid 1px #ececec;
   flex-grow: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .reviews__item {
@@ -90,6 +94,13 @@
     &::after {
       height: 18px;
       top: 70px;
+    }
+  }
+
+  @media (min-width: 768px) and (min-resolution: 144dpi),
+    (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .intro {
+      background-image: url("../../img/review@2x.jpg");
     }
   }
 
@@ -149,5 +160,14 @@
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .reviews__button:hover,
+  .reviews__button:focus {
+    opacity: 0.6;
+  }
+
+  .reviews__button:active {
+    opacity: 0.3;
   }
 }

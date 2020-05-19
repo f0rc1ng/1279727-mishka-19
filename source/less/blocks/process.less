@@ -46,6 +46,24 @@
 .process__video {
   margin: 0 auto;
   width: 260px;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 101px;
+    height: 77px;
+    background-image: url("../../img/icon-play.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 768px) {
@@ -61,6 +79,10 @@
   .process__video {
     order: -1;
     width: auto;
+
+    &::before {
+      top: 190px;
+    }
   }
 
   .process__title {
@@ -101,10 +123,29 @@
   .process__list {
     max-height: 455px;
     flex-wrap: wrap;
+
+    &:hover {
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .process__video {
     margin: 0;
+  }
+
+  .process__video:hover::before {
+    width: 121px;
+    height: 92px;
+  }
+
+  .process__video:active::before {
+    width: 81px;
+    height: 62px;
+    opacity: 0.8;
   }
 
   .process__item {

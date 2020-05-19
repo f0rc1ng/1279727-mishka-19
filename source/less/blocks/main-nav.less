@@ -3,6 +3,43 @@
   padding: 0;
 }
 
+.main-nav__ham {
+  cursor: pointer;
+  user-select: none;
+}
+
+.main-nav__hamRotate.main-nav__active {
+  transform: rotate(45deg);
+}
+
+.main-nav__hamRotate180.main-nav__active {
+  transform: rotate(180deg);
+}
+
+.main-nav__line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.main-nav__ham-main .main-nav__top {
+  stroke-dasharray: 40 139;
+}
+
+.main-nav__ham-main .main-nav__bottom {
+  stroke-dasharray: 40 180;
+}
+
+.main-nav__ham-main.main-nav__active .main-nav__top {
+  stroke-dashoffset: -98px;
+}
+
+.main-nav__ham-main.main-nav__active .main-nav__bottom {
+  stroke-dashoffset: -138px;
+}
+
 .main-nav__link {
   font-size: 17px;
   line-height: 24px;
@@ -13,6 +50,18 @@
 
   &:last-of-type {
     padding-bottom: 32px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -89,9 +138,10 @@
 .main-nav__toggle {
   display: flex;
   position: absolute;
-  width: 20px;
-  height: 14px;
+  width: 45px;
+  height: 50px;
   right: 30px;
+  outline: none;
 }
 
 .main-nav__toggle-line {
@@ -124,6 +174,11 @@
   .main-nav {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .main-nav__logo-image {
+    width: 112px;
+    height: 46px;
   }
 
   .main-nav__list {
@@ -276,5 +331,24 @@
     flex-grow: 1;
     justify-content: center;
     display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .main-nav__logo-image {
+    width: 149px;
+    height: 72px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

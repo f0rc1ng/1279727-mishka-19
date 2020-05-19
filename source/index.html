@@ -11,16 +11,39 @@
     <header class="page-header wrapper-desktop">
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <a href="#" class="main-nav__logo"
-            ><img
-              class="main-nav__logo-image"
-              src="img/logo-mobile.svg"
-              width="#"
-              height="#"
-              alt="logo"
-          /></a>
+          <a href="index.html" class="main-nav__logo">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/logo-desktop.svg"
+              />
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
+              <img
+                class="main-nav__logo-image"
+                src="img/logo-mobile.svg"
+                width="86"
+                height="35"
+                alt="logo"
+              />
+            </picture>
+          </a>
           <button class="main-nav__toggle" aria-label="меню-сайта">
-            <span class="main-nav__toggle-line"></span>
+            <svg
+              class="main-nav__ham main-nav__hamRotate main-nav__ham-main"
+              viewBox="0 0 100 100"
+              width="80"
+              onclick="this.classList.toggle('main-nav__active')"
+            >
+              <path
+                class="main-nav__line main-nav__top"
+                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+              />
+              <path class="main-nav__line main-nav__middle" d="m 30,50 h 40" />
+              <path
+                class="main-nav__line main-nav__bottom"
+                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+              />
+            </svg>
           </button>
         </div>
         <ul class="main-nav__list site-list main-nav--nojs main-nav--closed">
@@ -125,13 +148,30 @@
               </table>
             </div>
             <div class="product-week__wrapper-image">
-              <img
-                class="product-week__image"
-                src="img/triple-set-mobile@1x.jpg"
-                width="260"
-                height="315"
-                alt="Вязаные корзинки"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1150px)"
+                  srcset="
+                    img/triple-set-desktop@1x.jpg 1x,
+                    img/triple-set-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/triple-set-tablet@1x.jpg 1x,
+                    img/triple-set-tablet@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="product-week__image"
+                  src="img/triple-set-mobile@1x.jpg"
+                  srcset="img/triple-set-mobile@2x.jpg 2x"
+                  width="260"
+                  height="315"
+                  alt="Вязаные корзинки"
+                />
+              </picture>
               <span class="product-week__price">Цена: 990 руб.</span>
               <a href="#" class="product-week__button button">Заказать</a>
             </div>
@@ -198,7 +238,7 @@
           <div class="contacts__list">
             <div class="contacts__item">e-mail:</div>
             <div class="contacts__item">
-              <a href="mailto: info@mimimishkashop.ru"
+              <a class="contacts__link" href="mailto: info@mimimishkashop.ru"
                 >info@mimimishkashop.ru</a
               >
             </div>
@@ -209,11 +249,23 @@
           </div>
           <a class="contacts__write button" href="#">Напишите нам</a>
 
-          <noscript
-            ><img
-              src="#"
-              alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
-          /></noscript>
+          <noscript>
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x"
+              />
+              <img
+                src="img/map-mobile@1x.jpg"
+                srcset="img/map-mobile@2x.jpg 2x"
+                alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
+              />
+            </picture>
+          </noscript>
           <iframe
             class="contacts__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6133820450889!2d30.3207472519547!3d59.93855728178721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1585676184692!5m2!1sru!2sru"
@@ -268,6 +320,41 @@
         </div>
       </div>
     </footer>
+    <aside class="popup-cart popup-cart--closed">
+      <div class="popup-cart__wrapper">
+        <div class="popup-cart__wrapper">
+          <span class="popup-cart__title">Добавить в корзину</span>
+          <span class="popup-cart__instruction">Выберите размер:</span>
+          <div class="popup-cart__radio">
+            <div class="radio-popup">
+              <input type="radio" name="grid" id="small" value="S" checked />
+              <label
+                class="radio-label__popup"
+                data-value="S"
+                for="small"
+              ></label>
+            </div>
+            <div class="radio-popup">
+              <input type="radio" name="grid" id="mid" value="M" />
+              <label
+                class="radio-label__popup"
+                data-value="M"
+                for="mid"
+              ></label>
+            </div>
+            <div class="radio-popup">
+              <input type="radio" name="grid" id="large" value="L" />
+              <label
+                class="radio-label__popup"
+                data-value="L"
+                for="large"
+              ></label>
+            </div>
+          </div>
+          <button type="button" class="popup-cart__button">Добавить</button>
+        </div>
+      </div>
+    </aside>
     <script src="js/script.js"></script>
   </body>
 </html>

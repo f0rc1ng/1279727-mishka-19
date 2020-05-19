@@ -1,7 +1,36 @@
 .popup-cart {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 30px;
+  box-shadow: 0 5px 10px 0 rgb(0, 1, 1, 0.25);
+  border: solid 1px #777777;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 400%;
+    height: 500%;
+    background-color: #ffffff;
+    opacity: 0.9;
+    left: -30px;
+    top: -150%;
+  }
+}
+
+.popup-cart--closed {
+  display: none;
+}
+
+.popup-cart__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
 }
 
 .popup-cart__title {
@@ -9,6 +38,9 @@
   line-height: 30px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  width: 150px;
 }
 
 .popup-cart__instruction {
@@ -31,11 +63,80 @@
   line-height: 16px;
   text-align: center;
   font-weight: 700;
-  padding: 12px 0;
+  padding: 20px 0;
   width: 100%;
-  max-width: 292px;
+  cursor: pointer;
 }
 
 .popup-cart__radio {
   display: flex;
+  margin-bottom: 31px;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.popup-cart__radio input[name="grid"] {
+  opacity: 0;
+}
+
+.radio-label__popup::before {
+  content: attr(data-value);
+  position: relative;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  font-weight: 700;
+}
+
+.radio-popup input[type="radio"]:checked ~ .radio-label__popup::before {
+  border-color: #62d1ba;
+}
+
+.radio-label__popup:hover::before {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+.radio-popup {
+  margin-right: 7px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .popup-cart {
+    width: 566px;
+    padding: 51px 103px 46px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      left: -100%;
+    }
+  }
+
+  .popup-cart__title {
+    font-size: 30px;
+    line-height: 57px;
+    width: 360px;
+  }
+
+  .popup-cart__instruction {
+    font-size: 17px;
+  }
+
+  .radio-label__popup::before {
+    width: 112px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .popup-cart::before {
+    left: -150%;
+  }
 }
