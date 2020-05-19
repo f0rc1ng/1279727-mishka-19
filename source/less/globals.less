@@ -3,9 +3,12 @@ body {
   background: #ffffff;
   color: #000000;
   font-size: 15px;
+  margin: 0;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -32,5 +35,20 @@ img {
   .wrapper-desktop {
     max-width: 1150px;
     margin: 0 auto;
+  }
+
+  .button:hover {
+    background-color: #444444;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .button:focus {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  .button:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
