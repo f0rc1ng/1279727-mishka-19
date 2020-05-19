@@ -7,28 +7,35 @@
   cursor: pointer;
   user-select: none;
 }
+
 .main-nav__hamRotate.main-nav__active {
   transform: rotate(45deg);
 }
+
 .main-nav__hamRotate180.main-nav__active {
   transform: rotate(180deg);
 }
+
 .main-nav__line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #000;
+  stroke: #000000;
   stroke-width: 5.5;
   stroke-linecap: round;
 }
+
 .main-nav__ham-main .main-nav__top {
   stroke-dasharray: 40 139;
 }
+
 .main-nav__ham-main .main-nav__bottom {
   stroke-dasharray: 40 180;
 }
+
 .main-nav__ham-main.main-nav__active .main-nav__top {
   stroke-dashoffset: -98px;
 }
+
 .main-nav__ham-main.main-nav__active .main-nav__bottom {
   stroke-dashoffset: -138px;
 }
