@@ -6,7 +6,7 @@
     display: block;
     position: relative;
     width: 100%;
-    height: 13px;
+    height: 6px;
     background-image: url("../../img/bg-zigzag-line.svg");
     background-position: center;
     background-repeat: repeat;
@@ -24,10 +24,13 @@
 
   &--flower-icon {
     order: -6;
+    margin-bottom: 28px;
   }
 
   &--flower-icon::before {
     content: "";
+    position: relative;
+    left: 8px;
     display: block;
     width: 32px;
     height: 37px;
@@ -40,6 +43,7 @@
 
   &--banknote-icon {
     order: -5;
+    margin-bottom: 33px;
   }
 
   &--banknote-icon::before {
@@ -56,11 +60,14 @@
 
   &--heart-icon {
     order: -4;
+    margin-bottom: 30px;
   }
 
   &--heart-icon::before {
     content: "";
     display: block;
+    position: relative;
+    left: 6px;
     width: 34px;
     height: 27px;
     background-image: url("../../img/icon-feature-heart.svg");
@@ -72,11 +79,13 @@
 
   &--ball-icon {
     order: -3;
+    margin-bottom: 30px;
   }
 
   &--ball-icon::before {
     content: "";
     display: block;
+
     width: 35px;
     height: 34px;
     background-image: url("../../img/icon-feature-ball.svg");
@@ -88,11 +97,14 @@
 
   &--rocket-icon {
     order: -2;
+    margin-bottom: 25px;
   }
 
   &--rocket-icon::before {
     content: "";
     display: block;
+    position: relative;
+    left: -8px;
     width: 55px;
     height: 23px;
     background-image: url("../../img/icon-feature-rocket.svg");
@@ -123,6 +135,7 @@
   font-size: 25px;
   line-height: 30px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .advantages__list {
@@ -137,13 +150,16 @@
     padding: 0 52px;
 
     &::before {
-      height: 18px;
+      height: 17px;
+      top: -16px;
     }
   }
 
   .advantages__title {
     font-size: 43px;
     line-height: 50px;
+    margin-top: 31px;
+    margin-bottom: 50px;
   }
 
   .advantages__list {
@@ -159,7 +175,36 @@
     order: 0;
 
     &:nth-of-type(2n + 1) {
-      margin-right: 10%;
+      margin-right: 6%;
+    }
+
+    &--flower-icon::before {
+      margin-bottom: 16px;
+    }
+
+    &--banknote-icon::before {
+      margin-bottom: 53px;
+      position: relative;
+      top: 27px;
+    }
+
+    &--rocket-icon::before {
+      top: 30px;
+      left: -11px;
+      margin-bottom: 57px;
+    }
+
+    &--heart-icon::before {
+      top: 30px;
+      left: 8px;
+      margin-bottom: 51px;
+    }
+
+    &--gift-icon::before {
+      position: relative;
+      top: 27px;
+      left: -3px;
+      margin-bottom: 46px;
     }
   }
 }
@@ -170,6 +215,7 @@
 
     &::before {
       height: 25px;
+      top: 50px;
     }
 
     &::after {
@@ -183,19 +229,19 @@
       background-repeat: repeat;
       background-size: cover;
 
-      top: 550px;
+      top: 570px;
     }
   }
 
   .advantages__title {
     font-size: 53px;
     line-height: 57px;
-    margin-top: 130px;
-    margin-left: 175px;
+    margin-top: 105px;
+    margin-left: 217px;
   }
 
   .advantages__list {
-    margin-left: 175px;
+    margin-left: 220px;
     margin-right: 220px;
   }
 }

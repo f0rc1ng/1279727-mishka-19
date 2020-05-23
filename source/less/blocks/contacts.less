@@ -3,10 +3,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 38px;
 }
 
 .contacts__write {
   order: 1;
+  padding: 15px 0 14px;
 }
 
 .contacts__title {
@@ -15,6 +17,7 @@
   font-weight: 700;
   position: relative;
   padding: 0 30px;
+  margin-bottom: 25px;
 }
 
 .contacts {
@@ -34,7 +37,7 @@
   }
 
   &:last-child {
-    max-width: 55%;
+    max-width: 56%;
   }
 
   a {
@@ -48,17 +51,38 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0 30px;
+  margin-bottom: 36px;
+
+  .contacts__item:first-child {
+    margin-bottom: 30px;
+    margin-right: 10px;
+  }
+
+  .contacts__item:nth-child(3) {
+    margin-right: 10px;
+  }
 }
 
 .contacts__map {
   width: 100%;
   height: 457px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
+  .contacts__wrapper {
+    margin-bottom: 56px;
+  }
+
   .contacts__list {
     padding: 0 52px;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 55px;
+
+    .contacts__item:first-child {
+      margin-right: 0;
+    }
   }
 
   .contacts__item {
@@ -85,6 +109,8 @@
     line-height: 50px;
     width: 100%;
     padding: 0 52px;
+    margin-top: 75px;
+    margin-bottom: 50px;
 
     &::before {
       content: "";
@@ -93,13 +119,17 @@
       width: 47px;
       height: 81px;
       background-image: url("../../img/icon-flag.svg");
-      right: 0;
-      top: -10px;
+      right: 51px;
+      top: -15px;
     }
   }
 
   .contacts__write {
     max-width: 230px;
+  }
+
+  .contacts__map {
+    margin-bottom: 55px;
   }
 }
 
@@ -115,7 +145,8 @@
     font-size: 53px;
     line-height: 57px;
     width: 35%;
-    margin-left: 175px;
+    margin-left: 168px;
+    margin-top: 70px;
     padding: 0;
 
     &::before {
@@ -124,9 +155,13 @@
     }
   }
 
-  .contacts::before {
-    height: 23px;
-    top: -80px;
+  .contacts {
+    margin-bottom: 105px;
+
+    &::before {
+      height: 23px;
+      top: -80px;
+    }
   }
 
   .contacts__item {
@@ -156,7 +191,7 @@
     width: 30%;
     padding: 0;
     margin-left: 175px;
-    margin-bottom: 95px;
+    margin-bottom: 48px;
   }
 
   .contacts__map {

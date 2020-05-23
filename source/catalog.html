@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
   <body>
@@ -46,7 +46,7 @@
             </svg>
           </button>
         </div>
-        <ul class="main-nav__list site-list main-nav--nojs main-nav--closed">
+        <ul class="main-nav__list site-list main-nav__nojs main-nav__closed">
           <li class="main-nav__item">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
           </li>
@@ -57,7 +57,7 @@
             <span class="main-nav__text">Бесплатная доставка по России</span>
           </li>
         </ul>
-        <ul class="main-nav__list user-list main-nav--nojs main-nav--closed">
+        <ul class="main-nav__list user-list main-nav__nojs main-nav__closed">
           <li class="main-nav__item">
             <a href="" class="main-nav__link main-nav__link--search-icon"
               ><span class="main-nav__link-text">Поиск по сайту</span></a
@@ -83,12 +83,35 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page__title">Каталог товаров</h1>
+      <h1 class="page-main__title">Каталог товаров</h1>
       <section class="products wrapper-desktop">
         <div class="products__wrapper">
           <article class="products__item">
             <a href="#" class="products__link">
-              <picture class="product__img">
+              <picture class="products__img">
+                <source
+                  type="image/webp"
+                  media="(min-width: 1150px)"
+                  srcset="
+                    img/photo-hare-desktop@1x.webp 1x,
+                    img/photo-hare-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-hare-tablet@1x.webp 1x,
+                    img/photo-hare-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/photo-hare-mobile@1x.webp 1x,
+                    img/photo-hare-mobile@2x.webp 2x
+                  "
+                />
                 <source
                   media="(min-width: 1150px)"
                   srcset="
@@ -97,7 +120,7 @@
                   "
                 />
                 <source
-                  media="(min-width: 772px)"
+                  media="(min-width: 768px)"
                   srcset="
                     img/photo-hare-tablet@1x.jpg 1x,
                     img/photo-hare-tablet@2x.jpg 2x,
@@ -114,18 +137,41 @@
             </a>
             <div class="products__text">
               <a href="#" class="products__link">
-                <span class="product__title">Зайчик-попрыгайчик</span>
+                <span class="products__title">Зайчик-попрыгайчик</span>
               </a>
-              <span class="product__properties">Рост 30 см, вес 200 г</span>
+              <span class="products__properties">Рост 30 см, вес 200 г</span>
               <span class="products__price">1 200 руб.</span>
-              <a href="#" class="products__link">
+              <a href="#" class="products__link" onclick="openPopUp()">
                 <span class="visually-hidden">Добавить в корзину</span>
               </a>
             </div>
           </article>
           <article class="products__item">
             <a href="#" class="products__link">
-              <picture class="product__img">
+              <picture class="products__img">
+                <source
+                  type="image/webp"
+                  media="(min-width: 1150px)"
+                  srcset="
+                    img/photo-bowl-desktop@1x.webp 1x,
+                    img/photo-bowl-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-bowl-tablet@1x.webp 1x,
+                    img/photo-bowl-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/photo-bowl-mobile@1x.webp 1x,
+                    img/photo-bowl-mobile@2x.webp 2x
+                  "
+                />
                 <source
                   media="(min-width: 1150px)"
                   srcset="
@@ -134,7 +180,7 @@
                   "
                 />
                 <source
-                  media="(min-width: 772px)"
+                  media="(min-width: 768px)"
                   srcset="
                     img/photo-bowl-tablet@1x.jpg 1x,
                     img/photo-bowl-tablet@2x.jpg 2x
@@ -151,20 +197,43 @@
             </a>
             <div class="products__text">
               <a href="#" class="products__link">
-                <span class="product__title">Корзинка для белья</span>
+                <span class="products__title">Корзинка для белья</span>
               </a>
-              <span class="product__properties"
+              <span class="products__properties"
                 >Диаметр 15 см, высота 10 см</span
               >
               <span class="products__price">690 руб.</span>
-              <a href="#" class="products__link">
+              <a href="#" class="products__link" onclick="openPopUp()">
                 <span class="visually-hidden">Добавить в корзину</span>
               </a>
             </div>
           </article>
           <article class="products__item">
             <a href="#" class="products__link">
-              <picture class="product__img">
+              <picture class="products__img">
+                <source
+                  type="image/webp"
+                  media="(min-width: 1150px)"
+                  srcset="
+                    img/photo-toys-desktop@1x.webp 1x,
+                    img/photo-toys-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-toys-tablet@1x.webp 1x,
+                    img/photo-toys-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/photo-toys-mobile@1x.webp 1x,
+                    img/photo-toys-mobile@2x.webp 2x
+                  "
+                />
                 <source
                   media="(min-width: 1150px)"
                   srcset="
@@ -173,7 +242,7 @@
                   "
                 />
                 <source
-                  media="(min-width: 772px)"
+                  media="(min-width: 768px)"
                   srcset="
                     img/photo-toys-tablet@1x.jpg 1x,
                     img/photo-toys-tablet@2x.jpg 2x
@@ -190,13 +259,15 @@
             </a>
             <div class="products__text">
               <a href="#" class="products__link">
-                <span class="product__title">Большая корзинка для игрушек</span>
+                <span class="products__title"
+                  >Большая корзинка для игрушек</span
+                >
               </a>
-              <span class="product__properties"
+              <span class="products__properties"
                 >Диаметр 30 см, высота 30 см</span
               >
               <span class="products__price">1 500 руб.</span>
-              <a href="#" class="products__link">
+              <a href="#" class="products__link" onclick="openPopUp()">
                 <span class="visually-hidden">Добавить в корзину</span>
               </a>
             </div>
@@ -209,6 +280,29 @@
             <h2 class="process__title">Процесс производства</h2>
             <div class="process__video">
               <picture class="process__img">
+                <source
+                  type="image/webp"
+                  media="(min-width: 1150px)"
+                  srcset="
+                    img/video-desktop@1x.webp 1x,
+                    img/video-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/video-tablet@1x.webp 1x,
+                    img/video-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/video-mobile@1x.webp 1x,
+                    img/video-mobile@2x.webp 2x
+                  "
+                />
                 <source
                   media="(min-width: 1150px)"
                   srcset="
@@ -236,7 +330,11 @@
                 По просьбам наших любимых фолловеров мы сняли для вас подробное
                 видео о том, как появляются наши товары.
               </p>
-              <button type="button" class="process__button button">
+              <button
+                type="button"
+                class="process__button button"
+                onclick="openPopUp()"
+              >
                 Сделать заказ
               </button>
             </div>
@@ -248,31 +346,31 @@
       <div class="page-footer__wrapper">
         <a href="#" class="page-footer__logo"
           ><svg class="page-footer__logo-image" width="102" height="34">
-            <use xlink:href="img/sprite.svg#footer-logo"></use></svg
+            <use xlink:href="img/sprite.svg#logo-footer"></use></svg
         ></a>
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a
               href="#"
               class="page-footer__social-link page-footer__social-link--insta"
-              ><svg class="page-footer__icon--insta" width="22" height="21">
-                <use xlink:href="img/sprite.svg#instagram"></use></svg
+              ><svg class="page-footer__icon-insta" width="22" height="21">
+                <use xlink:href="img/sprite.svg#icon-insta"></use></svg
             ></a>
           </li>
           <li class="page-footer__social-item">
             <a
               href="#"
               class="page-footer__social-link page-footer__social-link--fb"
-              ><svg class="page-footer__icon--fb" width="15" height="28">
-                <use xlink:href="img/sprite.svg#facebook"></use></svg
+              ><svg class="page-footer__icon-fb" width="15" height="28">
+                <use xlink:href="img/sprite.svg#icon-fb"></use></svg
             ></a>
           </li>
           <li class="page-footer__social-item">
             <a
               href="#"
               class="page-footer__social-link page-footer__social-link--tw"
-              ><svg class="page-footer__icon--tw" width="23" height="20">
-                <use xlink:href="img/sprite.svg#twitter"></use></svg
+              ><svg class="page-footer__icon-tw" width="23" height="20">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use></svg
             ></a>
           </li>
         </ul>
@@ -286,8 +384,8 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
-    <aside class="popup-cart popup-cart--closed">
+
+    <aside class="popup-cart popup-cart__closed">
       <div class="popup-cart__wrapper">
         <div class="popup-cart__wrapper">
           <span class="popup-cart__title">Добавить в корзину</span>
@@ -296,7 +394,7 @@
             <div class="radio-popup">
               <input type="radio" name="grid" id="small" value="S" checked />
               <label
-                class="radio-label__popup"
+                class="radio-popup__label"
                 data-value="S"
                 for="small"
               ></label>
@@ -304,7 +402,7 @@
             <div class="radio-popup">
               <input type="radio" name="grid" id="mid" value="M" />
               <label
-                class="radio-label__popup"
+                class="radio-popup__label"
                 data-value="M"
                 for="mid"
               ></label>
@@ -312,15 +410,22 @@
             <div class="radio-popup">
               <input type="radio" name="grid" id="large" value="L" />
               <label
-                class="radio-label__popup"
+                class="radio-popup__label"
                 data-value="L"
                 for="large"
               ></label>
             </div>
           </div>
-          <button type="button" class="popup-cart__button">Добавить</button>
+          <button
+            type="button"
+            onclick="closePopUp()"
+            class="popup-cart__button"
+          >
+            Добавить
+          </button>
         </div>
       </div>
     </aside>
+    <script src="js/script.js"></script>
   </body>
 </html>
