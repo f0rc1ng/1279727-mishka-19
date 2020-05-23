@@ -47,6 +47,7 @@
   color: #000000;
   display: block;
   padding: 32px 0 0;
+  transition: all 0.3s ease-out;
 
   &:last-of-type {
     padding-bottom: 32px;
@@ -54,6 +55,11 @@
 
   &:hover {
     opacity: 0.6;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    filter: grayscale(0);
   }
 
   &:focus {
@@ -76,10 +82,11 @@
     background-image: url("../../img/icon-search.svg");
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.2;
+    opacity: 0.4;
     left: -44px;
     top: 50%;
     transform: translateY(-50%);
+    filter: grayscale(1);
   }
 }
 
@@ -94,10 +101,11 @@
     background-image: url("../../img/icon-cart.svg");
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.2;
+    opacity: 0.4;
     left: -44px;
     top: 50%;
     transform: translateY(-50%);
+    filter: grayscale(1);
   }
 }
 
@@ -106,15 +114,15 @@
   padding-left: 76px;
 }
 
-.main-nav--closed {
+.main-nav__closed {
   display: none;
 }
 
-.main-nav--nojs {
+.main-nav__nojs {
   display: block;
 }
 
-.main-nav--opened {
+.main-nav__opened {
   display: block;
 }
 
@@ -140,7 +148,7 @@
   position: absolute;
   width: 45px;
   height: 50px;
-  right: 30px;
+  right: 17px;
   outline: none;
 }
 
@@ -209,8 +217,11 @@
     font-size: 15px;
     line-height: 24px;
     color: #444444;
-    display: block;
-    padding: 23px 0;
+    display: flex;
+    padding: 0;
+    min-height: 70px;
+    align-items: center;
+    padding-bottom: 21px;
   }
 
   .site-list {
@@ -238,7 +249,11 @@
     }
 
     .main-nav__link {
-      padding: 23px 0 0;
+      padding: 0;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      padding-bottom: 22px;
     }
   }
 
@@ -297,7 +312,7 @@
     }
 
     .main-nav__link {
-      padding: 23px 0 0;
+      padding: 17px 0 0;
     }
   }
 
@@ -325,14 +340,18 @@
       padding-left: 34px;
       margin: 0;
     }
+
+    .main-nav__link {
+      font-size: 17px;
+      padding-bottom: 0;
+    }
   }
 
   .main-nav__wrapper {
     flex-grow: 1;
     justify-content: center;
     display: flex;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 70px 0 0;
   }
 
   .main-nav__logo-image {

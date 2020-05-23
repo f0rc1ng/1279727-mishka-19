@@ -4,10 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header wrapper-desktop">
       <nav class="main-nav">
         <div class="main-nav__wrapper">
@@ -46,7 +49,7 @@
             </svg>
           </button>
         </div>
-        <ul class="main-nav__list site-list main-nav--nojs main-nav--closed">
+        <ul class="main-nav__list site-list main-nav__nojs main-nav__closed">
           <li class="main-nav__item">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
           </li>
@@ -57,7 +60,7 @@
             <span class="main-nav__text">Бесплатная доставка по России</span>
           </li>
         </ul>
-        <ul class="main-nav__list user-list main-nav--nojs main-nav--closed">
+        <ul class="main-nav__list user-list main-nav__nojs main-nav__closed">
           <li class="main-nav__item">
             <a href="" class="main-nav__link main-nav__link--search-icon"
               ><span class="main-nav__link-text">Поиск по сайту</span></a
@@ -150,6 +153,29 @@
             <div class="product-week__wrapper-image">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 1150px)"
+                  srcset="
+                    img/triple-set-desktop@1x.webp 1x,
+                    img/triple-set-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/triple-set-tablet@1x.webp 1x,
+                    img/triple-set-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/triple-set-mobile@1x.webp 1x,
+                    img/triple-set-mobile@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 1150px)"
                   srcset="
                     img/triple-set-desktop@1x.jpg 1x,
@@ -173,7 +199,12 @@
                 />
               </picture>
               <span class="product-week__price">Цена: 990 руб.</span>
-              <a href="#" class="product-week__button button">Заказать</a>
+              <a
+                href="#"
+                class="product-week__button button"
+                onclick="openPopUp()"
+                >Заказать</a
+              >
             </div>
           </div>
         </div>
@@ -252,6 +283,20 @@
           <noscript>
             <picture>
               <source
+                type="image/webp"
+                media="(min-width: 1150px)"
+                srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x"
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x"
+              />
+              <source
+                type="image/webp"
+                srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x"
+              />
+              <source
                 media="(min-width: 1150px)"
                 srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x"
               />
@@ -282,31 +327,31 @@
       <div class="page-footer__wrapper">
         <a href="#" class="page-footer__logo"
           ><svg class="page-footer__logo-image" width="102" height="34">
-            <use xlink:href="img/sprite.svg#footer-logo"></use></svg
+            <use xlink:href="img/sprite.svg#logo-footer"></use></svg
         ></a>
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a
               href="#"
               class="page-footer__social-link page-footer__social-link--insta"
-              ><svg class="page-footer__icon--insta" width="22" height="21">
-                <use xlink:href="img/sprite.svg#instagram"></use></svg
+              ><svg class="page-footer__icon-insta" width="22" height="21">
+                <use xlink:href="img/sprite.svg#icon-insta"></use></svg
             ></a>
           </li>
           <li class="page-footer__social-item">
             <a
               href="#"
               class="page-footer__social-link page-footer__social-link--fb"
-              ><svg class="page-footer__icon--fb" width="15" height="28">
-                <use xlink:href="img/sprite.svg#facebook"></use></svg
+              ><svg class="page-footer__icon-fb" width="15" height="28">
+                <use xlink:href="img/sprite.svg#icon-fb"></use></svg
             ></a>
           </li>
           <li class="page-footer__social-item">
             <a
               href="#"
               class="page-footer__social-link page-footer__social-link--tw"
-              ><svg class="page-footer__icon--tw" width="23" height="20">
-                <use xlink:href="img/sprite.svg#twitter"></use></svg
+              ><svg class="page-footer__icon-tw" width="23" height="20">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use></svg
             ></a>
           </li>
         </ul>
@@ -320,7 +365,7 @@
         </div>
       </div>
     </footer>
-    <aside class="popup-cart popup-cart--closed">
+    <aside class="popup-cart popup-cart__closed">
       <div class="popup-cart__wrapper">
         <div class="popup-cart__wrapper">
           <span class="popup-cart__title">Добавить в корзину</span>
@@ -329,7 +374,7 @@
             <div class="radio-popup">
               <input type="radio" name="grid" id="small" value="S" checked />
               <label
-                class="radio-label__popup"
+                class="radio-popup__label"
                 data-value="S"
                 for="small"
               ></label>
@@ -337,7 +382,7 @@
             <div class="radio-popup">
               <input type="radio" name="grid" id="mid" value="M" />
               <label
-                class="radio-label__popup"
+                class="radio-popup__label"
                 data-value="M"
                 for="mid"
               ></label>
@@ -345,13 +390,19 @@
             <div class="radio-popup">
               <input type="radio" name="grid" id="large" value="L" />
               <label
-                class="radio-label__popup"
+                class="radio-popup__label"
                 data-value="L"
                 for="large"
               ></label>
             </div>
           </div>
-          <button type="button" class="popup-cart__button">Добавить</button>
+          <button
+            type="button"
+            onclick="closePopUp()"
+            class="popup-cart__button"
+          >
+            Добавить
+          </button>
         </div>
       </div>
     </aside>

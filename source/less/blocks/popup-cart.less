@@ -22,7 +22,7 @@
   }
 }
 
-.popup-cart--closed {
+.popup-cart__closed {
   display: none;
 }
 
@@ -48,7 +48,7 @@
   color: #444444;
 }
 
-.radio-label__popup {
+.radio-popup__label {
   font-size: 17px;
   line-height: 16px;
   color: #444444;
@@ -80,7 +80,7 @@
   opacity: 0;
 }
 
-.radio-label__popup::before {
+.radio-popup__label::before {
   content: attr(data-value);
   position: relative;
   width: 82px;
@@ -92,11 +92,11 @@
   font-weight: 700;
 }
 
-.radio-popup input[type="radio"]:checked ~ .radio-label__popup::before {
+.radio-popup input[type="radio"]:checked ~ .radio-popup__label::before {
   border-color: #62d1ba;
 }
 
-.radio-label__popup:hover::before {
+.radio-popup__label:hover::before {
   border: 2px solid rgba(68, 68, 68, 0.3);
 }
 
@@ -130,7 +130,7 @@
     font-size: 17px;
   }
 
-  .radio-label__popup::before {
+  .radio-popup__label::before {
     width: 112px;
   }
 }
