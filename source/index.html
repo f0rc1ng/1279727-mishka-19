@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-700.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-700.woff" as="font" type="font/woff"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-regular.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/open-sans-v17-latin_cyrillic-regular" as="font" type="font/woff"
+    crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
   <script src="node_modules/svgxuse/svgxuse.js"></script>
 </head>
@@ -218,7 +226,7 @@
           </svg>
         </button>
       </div>
-      <ul class="main-nav__list site-list main-nav__nojs main-nav__closed">
+      <ul class="main-nav__list site-list main-nav__list--nojs main-nav__list--closed">
         <li class="main-nav__item">
           <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
         </li>
@@ -229,9 +237,10 @@
           <span class="main-nav__text">Бесплатная доставка по России</span>
         </li>
       </ul>
-      <ul class="main-nav__list user-list main-nav__nojs main-nav__closed">
+      <ul class="main-nav__list user-list main-nav__list--nojs main-nav__list--closed">
         <li class="main-nav__item">
-          <a href="" class="main-nav__link main-nav__link--search-icon"><span class="main-nav__link-text">Поиск по
+          <a href="" class="main-nav__link main-nav__link--search-icon" aria-label="Поиск по сайту"
+            title="Поиск по сайту"><span class="main-nav__link-text">Поиск по
               сайту</span></a>
         </li>
         <li class="main-nav__item">
@@ -432,25 +441,26 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a href="#" class="page-footer__logo"><svg class="page-footer__logo-image" width="102" height="34">
+      <a href="index.html" class="page-footer__logo" aria-label="На главную" title="На главную"><svg
+          class="page-footer__logo-image" width="102" height="34">
           <use xlink:href="img/sprite.svg#logo-footer"></use>
         </svg></a>
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link page-footer__social-link--insta"><svg
-              class="page-footer__icon-insta" width="22" height="21">
+          <a href="#" class="page-footer__social-link page-footer__social-link--insta" aria-label="Инстаграм"
+            title="Инстаграм"><svg class="page-footer__icon-insta" width="22" height="21">
               <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg></a>
         </li>
         <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link page-footer__social-link--fb"><svg class="page-footer__icon-fb"
-              width="15" height="28">
+          <a href="#" class="page-footer__social-link page-footer__social-link--fb" aria-label="Фэйсбук"
+            title="Фэйсбук"><svg class="page-footer__icon-fb" width="15" height="28">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg></a>
         </li>
         <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link page-footer__social-link--tw"><svg class="page-footer__icon-tw"
-              width="23" height="20">
+          <a href="#" class="page-footer__social-link page-footer__social-link--tw" aria-label="Твиттер"
+            title="Твиттер"><svg class="page-footer__icon-tw" width="23" height="20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg></a>
         </li>
@@ -462,7 +472,7 @@
       </div>
     </div>
   </footer>
-  <aside class="popup-cart popup-cart__closed">
+  <aside class="popup-cart popup-cart--closed">
     <div class="popup-cart__wrapper">
       <span class="popup-cart__title">Добавить в корзину</span>
       <span class="popup-cart__instruction">Выберите размер:</span>
