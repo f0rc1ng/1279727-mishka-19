@@ -1,6 +1,6 @@
 .process__wrapper {
   padding: 0 30px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 .process__title {
@@ -64,6 +64,10 @@
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+.process__button {
+  margin-bottom: 34px;
 }
 
 @media (min-width: 768px) {
@@ -132,7 +136,7 @@
 
   .process__list {
     max-height: 455px;
-    flex-wrap: wrap;
+    flex-direction: row;
 
     &:hover {
       box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
@@ -145,6 +149,7 @@
 
   .process__video {
     margin: 0;
+    width: 682px;
   }
 
   .process__video:hover::before {
@@ -159,18 +164,21 @@
   }
 
   .process__item {
-    margin: 0 35px 0 59px;
     width: 22%;
+    margin: 0;
+    margin-top: 180px;
   }
 
   .process__title {
     font-size: 20px;
     line-height: 24px;
     width: 250px;
-    padding: 95px 0 34px 59px;
+    padding: 95px 0 34px 79px;
+    margin-right: -170px;
+    z-index: -1;
 
     &::before {
-      left: 59px;
+      left: 79px;
       top: 43px;
     }
   }
